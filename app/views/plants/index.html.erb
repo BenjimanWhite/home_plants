@@ -1,0 +1,27 @@
+<h1>Let's see all plants!</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Species</th>
+    <th>Age</th>
+    <th>Last Potted On</th>
+    <th>Last Rotated On</th>
+    <th>Notes</th>
+    <th></th>
+  </tr>
+ 
+  <% @plants.each do |plant| %>
+    <tr>
+      <td><%= plant.name %></td>
+      <td><%= plant.species %></td>
+      <td><%= plant.age %></td>
+      <td><%= plant.last_potted_date %></td>
+      <td><%= plant.last_rotated_date %></td>
+      <td><%= plant.notes %></td>
+
+
+      <td><%= link_to 'Show', plant_path(plant) %></td>
+    </tr>
+  <% end %>
+</table>
