@@ -1,7 +1,18 @@
 class PlantsController < ApplicationController
 
+  def index
+  end
+
+  def show
+    @plant = Plant.find(params[:id])
+  end
+
   def new
   end
+
+  def edit
+  end
+
 
   def create
     @plant = Plant.new(plant_params)
@@ -11,9 +22,11 @@ class PlantsController < ApplicationController
     redirect_to @plant
   end
 
-  def index
+  def update
   end
 
+  def destroy
+  end
 
   private
 
