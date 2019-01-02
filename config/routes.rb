@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
-resources :plants
+  get 'landing/index'
+  
+  resources :plants
+
+  root 'landing#index'
 
 end
