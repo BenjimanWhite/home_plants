@@ -1,52 +1,6 @@
 <h1>New Plant <3</h1>
 
-<%= form_with scope: :plant, url: plants_path, local: true do |form| %>
-
-  <% if @plant.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-        <% @plant.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </p>
-
-  <p>
-    <%= form.label :species %><br>
-    <%= form.text_field :species %>
-  </p>
-
-  <p>
-    <%= form.label :age %><br>
-    <%= form.text_field :age %>
-  </p>
-
-  <p>
-    <%= form.label :last_potted_date %><br>
-    <%= form.text_field :last_potted_date %>
-  </p>
-
-  <p>
-    <%= form.label :last_rotated_date %><br>
-    <%= form.text_field :last_rotated_date %>
-  </p>
-
-  <p>
-    <%= form.label :notes %><br>
-    <%= form.text_area :notes %>
-  </p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-
-  <%= link_to 'Back to view all plants', plants_path %>
-
-<% end %> 
+<%= render 'form' %>
+<%= link_to 'Back to view all plants', plants_path %>
+ 
 
