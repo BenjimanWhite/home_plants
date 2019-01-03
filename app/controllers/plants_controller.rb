@@ -9,6 +9,7 @@ class PlantsController < ApplicationController
   end
 
   def new
+    @plant = Plant.new
   end
 
   def edit
@@ -18,9 +19,11 @@ class PlantsController < ApplicationController
   def create
     @plant = Plant.new(plant_params)
 
-    @plant.save
-
-    redirect_to @plant
+    if @plant.save
+      redirect_to @plant
+    else
+      render 'new'
+    end
   end
 
   def update
