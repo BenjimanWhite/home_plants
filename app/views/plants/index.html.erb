@@ -25,6 +25,9 @@
 
       <td><%= link_to 'Show', plant_path(plant) %></td>
       <td><%= link_to 'Edit this plant', edit_plant_path(plant) %></td>
+      <td><%= link_to 'Destroy', plant_path(plant),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
