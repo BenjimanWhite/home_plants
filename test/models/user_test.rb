@@ -54,4 +54,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "non-unique email addresses are invalid" do 
+    same_user = @user.dup
+
+    same_user.email = @user.email.upcase
+
+    @user.save
+    assert_not same_user.valid?
+
+  end
+
 end
