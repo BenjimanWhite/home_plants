@@ -1,0 +1,9 @@
+<% provide(:title, "Edit my information") %>
+<% provide(:button_text, 'Change my information') %>
+
+
+<h1>Update your profile</h1>
+
+<%= render 'shared/form_error_messages', object: @user %>
+
+<%= render 'form' %>
